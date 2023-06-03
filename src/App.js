@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+
+import React from "react";
+import Header from "./components/Header/Header";
+import Title from "./components/title/Title";
+import './app.css'
+import UpperBody from "./components/upperbody/UpperBody";
+import AboutUs from "./components/about us/AboutUs";
+import MESADA from './photos/mesada.png'
+
 
 function App() {
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <>
+   <Header />
+   <Title/>
+   <div style={{display: 'flex',flexDirection: 'row', width: '100vw', marginTop: '30px'}}>
+   <AboutUs />
+   <div style={{display: 'flex', justifyContent: 'center', alignSelf: 'center', alignContent: 'center', width: '100%' }}>
+   <img src={MESADA} alt='trabajo' style={{width: '90%', height: '800px', margin: '20px', marginTop: '60px', objectFit: 'cover'}} />
+
+   </div>
+
+   </div>
+  
+
+  
+  
+   {/* <UpperBody /> */}
+   </>
   );
 }
 
